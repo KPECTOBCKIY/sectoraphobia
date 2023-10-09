@@ -19,9 +19,7 @@ def get_text_messages(message):
     if message.text == '👋 Начать работу!':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn1 = types.KeyboardButton('Поиск')
-        btn2 = types.KeyboardButton('Аккаунт')
-        btn3 = types.KeyboardButton('Помощь')
-        markup.add(btn1, btn2, btn3)
+        markup.add(btn1)
         bot.send_message(message.from_user.id, '❓ Выберите что-то из предложенного ниже.', reply_markup=markup) #ответ бота
 
 elif message.text == 'Поиск':
